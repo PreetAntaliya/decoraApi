@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "title" : "Wedding" 
+    },
+    {
+        "id" : 2,
+        "title" : "birthday" 
+    },
+    {
+        "id" : 3,
+        "title" : "baby shower" 
+    },
+    {
+        "id" : 4,
+        "title" : "festivals" 
+    },
+    {
+        "id" : 5,
+        "title" : "mehandi" 
+    }
+]
