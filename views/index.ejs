@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decora Api</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <% jsonData[0].Weadding.forEach(category => { %>
+                <% category.Reception.forEach(theme => { %>
+                    <li>
+                        <strong>ID:</strong> <%= theme.id %><br>
+                        <strong>Name:</strong> <%= theme.theme %><br>
+                        <strong>Image:</strong> <img src="<%= theme.img %>" alt="<%= theme.theme %> Image" width="150" height="80"><br>
+                        <strong>Description:</strong> <%= theme.description %><br>
+                        <strong>Price:</strong> $<%= theme.price %>
+                    </li>
+                    <br>
+                <% }); %>
+            <% }); %>
+        </div>
+    </div>
+</body>
+
+</html>

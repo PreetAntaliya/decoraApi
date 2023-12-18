@@ -1,20 +1,25 @@
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
+const dotenv = require("dotenv");
 const app = express();
 
-app.use(cors())
+dotenv.config();
+app.use(cors());
+app.use(express.static('public'));
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 
 const apiData = require("./data.json");
 
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.send("Hellooooo!");
+  res.render("index", { jsonData: apiData });
 });
 app.get("/api", (req, res) => {
   res.send(apiData);
 });
 
 app.listen(port, () => {
-  console.log(`Server Is Live`);
+  console.log(`Server Is Live ${port}`);
 });
